@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Smart City Cleaning</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd">
+	<a href="/admin">Home</a> |
+	<a href="/home">Uploads</a> |
+	<a href="/selection">Training</a> |
+	<a href="/alert">Alert</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h2 align="center">Training Data </h2>
+  <table width="80%" border="1" align="center">
+    <tr>
+      <th width="302" class="bg1">&nbsp;</th>
+      
+      <th width="211" class="bg1">Type</th>
+      <th width="202" class="bg1">Name</th>
+      <th width="86" class="bg1">Action</th>
+    </tr>
+	
+	{% for row in data %}
+	
+    <tr>
+      <td><img src="../static/upload/{{ row[3] }}" width="300" height="300"></td>
+      <td>{{ row[1] }}</td>
+	  <td>{{ row[2] }}</td>
+	  <td><a href="/viewdata?act=del&did={{ row[0] }}">Delete </a></td>
+    </tr>
+	 {% endfor %}
+  </table>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

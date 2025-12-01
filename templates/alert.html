@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Smart City Cleaning</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd">
+	<a href="/admin">Home</a> |
+	<a href="/home">Uploads</a> |
+	<a href="/selection">Training</a> |
+	<a href="/alert">Alert</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h2 align="center">Trash Alert </h2>
+    <table width="80%" border="1" align="center">
+    <tr>
+      <th width="83" class="bg1">Sno</th>
+      
+   
+      <th width="244" class="bg1">Detected</th>
+      <th width="216" class="bg1">Date / Time </th>
+      <th width="160" class="bg1">Action</th>
+    </tr>
+	
+	{% for row in data %}
+	
+    <tr>
+      <td>{{ loop.index }}</td>
+     
+	  <td>{{ row[2] }}</td>
+	  <td>{{ row[3] }}</td>
+	  <td><a href="/alert?act=del&did={{ row[0] }}">Delete </a></td>
+    </tr>
+	 {% endfor %}
+  </table>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Smart City Cleaning</title>
+<link href="../static/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style1 {color: #009933}
+-->
+    </style>
+</head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd"><a href="/">Home</a> | <a href="/login">Login</a> | <a href="/testing">Testing</a> </div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h2 align="center">Training Process</h2>
+    <form action="" method="post" name="form1">
+     
+	  
+      <h3 align="center" class="style1">Training.....</h3>
+	  
+      <table width="359" height="178" border="1" align="center" cellpadding="5" cellspacing="0" bgcolor="#99CCFF">
+        <tr>
+          <td align="center">Image{{ img }}</td>
+        </tr>
+        <tr>
+          <td align="center">{{ tit }}</td>
+        </tr>
+        <tr>
+          <td align="center"><img src="../static/trained/{{ fn }}" width="200" height="200"></td>
+        </tr>
+      </table>
+	  {% if act=="on" %}
+	  <script>
+		setTimeout(function () {
+  		 window.location.href= '/training2?act={{ act }}&page={{ page }}&img={{ img }}';
+		}, 2000);
+		</script>
+	  
+	  {% else %}
+	  <script>
+	  alert("Training Process Completed..");
+	  window.location.href="/testing";
+	  </script>
+	  {% endif %}
+	  
+      <p align="center">&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+</form>
+    <p align="center">&nbsp; </p>
+    <p align="center">&nbsp;</p>
+</body>
+</html>

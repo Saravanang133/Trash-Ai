@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Smart City Cleaning</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd">
+	<a href="/">Home</a> |
+	<a href="/login">Login</a> |
+	<a href="/testing">Testing</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h3 align="center">Testing Process</h3>
+    <form name="form1" method="post" action="/testing">
+      <div align="center">
+        <p>
+          <input type="submit" name="Submit" value="Start Testing">
+        </p>
+        <p>&nbsp;</p>
+		{% if act=="train" %}
+		<script language="javascript">
+		alert("New Dataset has Added, so must complete Training Process");
+		window.location.href="/training2?act=on&page=0&img=0";
+		</script>
+		{% endif %}
+        <p>&nbsp;</p>
+      </div>
+    </form>
+    <p align="center">&nbsp; </p>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

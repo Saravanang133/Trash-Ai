@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Smart City Cleaning</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style1 {
+	color: #003399;
+	font-size: 16px;
+	font-weight: bold;
+}
+-->
+    </style>
+</head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd">
+	<a href="/admin">Home</a> |
+	<a href="/home">Uploads</a> |
+	<a href="/selection">Training</a> |
+	<a href="/alert">Alert</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h1 align="center">Training Data </h1>
+	<div class="register">
+			<h1>Upload Image</h1>
+			<!--<div class="links">
+				<a href="{{ url_for('login') }}" class="active">Login</a>
+				<a href="#">Register</a>
+			</div>-->
+			<form action="{{ url_for('home') }}" method="post" enctype="multipart/form-data">
+				
+				<select name="otype" placeholder="Object Type" required>
+				<option>Organic</option>
+				<option>Inorganic</option>
+				<option>Medical Waste</option>
+				</select>
+				
+				<input type="text" name="name" placeholder="Object Name" required>
+				
+				
+				<input type="file" name="file">
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Upload">
+			</form>
+</div>
+<p align="center"><a href="/viewdata">Data</a></p>
+{% if msg=="success" %}
+<p align="center" class="style1">Added Successful</p>
+{% endif %}
+
+<p align="center">&nbsp;</p>
+</body>
+</html>

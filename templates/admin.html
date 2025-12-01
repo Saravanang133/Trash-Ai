@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Smart City Cleaning</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Smart City Cleaning</div>
+	<div align="center" class="sd">
+	<a href="/admin">Home</a> |
+	<a href="/home">Uploads</a> |
+	<a href="/selection">Training</a> |
+	<a href="/alert">Alert</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h1 align="center">Welcome to Administrator </h1>
+    <form name="form1" method="post" action="/admin">
+      <table width="258" height="89" border="0" align="center">
+        <tr>
+          <td align="left">Mobile No. </td>
+          <td align="left"><input type="text" name="mobile" value="{{ data[2] }}"></td>
+        </tr>
+		<tr>
+          <td align="left">E-mail </td>
+          <td align="left"><input type="text" name="email" value="{{ data[3] }}"></td>
+        </tr>
+        <tr>
+          <td align="left">&nbsp;</td>
+          <td align="left"><input type="submit" name="Submit" value="Update"></td>
+        </tr>
+      </table>
+</form>
+    <h3 align="center">&nbsp;</h3>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

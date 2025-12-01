@@ -1,0 +1,2 @@
+org=['banana','apple','sandwich','orange','pizza','carrot','cake']
+inorg=['bottle','tvmonitor','laptop','mouse','remote','keyboard','cell phone']
